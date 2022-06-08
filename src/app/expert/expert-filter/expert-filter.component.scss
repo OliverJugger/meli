@@ -1,0 +1,57 @@
+@import '../../scss/design-system/palette', '../../scss/design-system/typography';
+
+.mat-select {
+    display: inline-block;
+    outline: none;
+}
+
+.ads-flight-map-catalog-filter {
+	border : 1px solid grey;
+	border-radius : 2%;
+	padding: 20px 40px;
+	margin: 30px 0;
+
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	& > * {
+		flex: 1 1 auto;
+	}
+
+	.ads-flight-map-catalog-filter-label {
+		font-family: bold;
+		color: grey;
+		font-size: 20px;
+
+		flex-grow: 0;
+	}
+
+	.ads-flight-map-catalog-filter-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		font-family: bold;
+		flex: 1 1 auto;
+	}
+
+	.ads-flight-map-catalog-filter-request-map {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.ads-flight-map-catalog-filter-info {
+			font-size: 15px;
+			color: grey;
+
+			flex: 0 3 20px;
+
+			cursor: default;
+
+			&.active {
+				color: blue;
+			}
+		}
+	}
+}

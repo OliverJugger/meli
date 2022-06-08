@@ -1,0 +1,60 @@
+@import 'design-system/palette', 'design-system/typography', 'variables';
+
+@mixin ads-administraction-list-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+
+	padding: 16px 8px;
+
+	padding: 16px 120px;
+
+	button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+
+		padding: 4px 6px;
+	}
+}
+
+@mixin ads-administraction-list {
+	overflow: auto;
+	border-bottom: 50px solid transparent; // space for the pagination
+
+	table {
+		thead {
+			position: sticky;
+			top: 0;
+			z-index: $ads-sticky-list-header-z-index;
+		}
+	}
+
+	ah-table-paginator {
+		position: fixed;
+		bottom: 0;
+		left: $ads-menu-width;
+		width: calc(100% - $ads-menu-width);
+		box-shadow: 0 2px 8px 0 rgba(80, 93, 115, 0.25);
+	}
+}
+
+@mixin ads-administration-list-highlight {
+	background-color: $p-blue-2;
+
+	&:hover {
+		background-color: $p-blue-3;
+	}
+}
+
+@mixin ads-administration-list-empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 50vh;
+
+	font-family: $font-bold;
+	color: $c-grey-9;
+}

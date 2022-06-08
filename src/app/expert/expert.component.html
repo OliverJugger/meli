@@ -1,0 +1,9 @@
+<app-expert-filter (onLaunch)="updateDataSource($event)" style="width:100%;"></app-expert-filter>
+
+<app-expert-list [dataSource]="dataSource" style="width:100%; margin-bottom:30px; "></app-expert-list>
+
+<my-app *ngIf="selected" 
+style="height: 50%; width:100%;" 
+[events]="sampleData">
+    <span class="k-icon k-i-loading" style="color: #ff6358"></span>
+</my-app>

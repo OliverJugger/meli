@@ -1,0 +1,11 @@
+@import 'utility';
+
+.ah-dialog-panel {
+	.mat-dialog-container {
+		@include ah-elevation();
+
+		max-height: 100vh;
+
+		position: relative;
+	}
+}

@@ -1,0 +1,34 @@
+@import 'palette', 'typography';
+
+.ah-form-group {
+	display: block;
+	min-width: 250px;
+
+	& > label {
+		font-family: $font-bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: $c-grey-7;
+
+		display: block;
+		margin-bottom: 8px;
+
+		.material-icons {
+			vertical-align: bottom;
+		}
+	}
+
+	ah-error {
+		display: block;
+	}
+
+	.ah-select,
+	.ah-input {
+		width: 100%;
+	}
+
+	&.ah-form-required > label:after {
+		content: ' *';
+		color: red;
+	}
+}

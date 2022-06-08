@@ -1,0 +1,9 @@
+.ah-tooltip {
+	@include ah-elevation();
+	background-color: white;
+	color: $c-grey-7 !important;
+	font-size: 1.3rem;
+	font-family: $font-normal;
+	text-align: center;
+	padding: 8px;
+}

@@ -1,0 +1,47 @@
+<form 
+	id="expert-form"
+	[formGroup]="form" 
+	class="ads-flight-map-catalog-filter ah-elevation"
+	(ngSubmit)="onSubmit()"
+>
+	<div class="ads-flight-map-catalog-filter-label">
+		Filtres
+	</div>
+
+	<mat-select	
+		id="typeExpert"
+		class="ah-select"
+		placeholder="Type d'expert"
+		[(value)]="this.typeExpertInput" >
+		<mat-option *ngFor="let typeExpert of typesExpertsAll" [value]="typeExpert.value">
+		  {{typeExpert.value}}
+		</mat-option>
+	</mat-select>
+
+	<mat-select
+		id="step"
+		class="ah-select"
+		formControlvalue="day"
+		placeholder="Jour de disponibilité"
+	>
+		<mat-option [value]="null"></mat-option>
+
+		<mat-option
+			*ngFor="let day of days"
+			[value]="day.id"
+		>
+			{{ day.value }}
+		</mat-option>
+	</mat-select>
+
+	<button 
+		type="submit"
+		form="expert-form"
+		mat-raised-button color="primary" 
+		style="width:70%;"
+				(click)="onClick()"
+	>
+        <span class="material-icons"> casino </span>
+        Lancer l'algorithme
+    </button>
+</form>

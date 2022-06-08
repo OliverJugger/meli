@@ -1,0 +1,133 @@
+@import 'palette', 'typography';
+
+.ah-select {
+	font-family: $font-normal;
+	font-size: 14px;
+
+	outline: none;
+	border: none;
+
+	padding: 7px 8px 5px 8px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom: 2px solid $c-grey-4;
+
+	background-color: $w-grey-1;
+	color: $w-grey-9;
+
+	&::placeholder {
+		color: $c-grey-6;
+	}
+
+	&:hover {
+		background-color: $w-grey-2;
+	}
+
+	&:focus {
+		padding: 5px 6px 3px 6px;
+		background-color: $w-grey-2;
+		border: 2px solid $p-blue-5;
+	}
+
+	&:disabled {
+		background-color: $w-grey-1;
+		color: $w-grey-7;
+		border: none;
+		padding: 8px;
+
+		cursor: not-allowed;
+
+		&::placeholder {
+			color: $w-grey-7;
+		}
+	}
+
+	&.ah-input-error {
+		border-color: $red-1;
+	}
+}
+
+/// Angular material's select override
+/// Ex:
+/// 	<mat-select class="ah-select">
+///			<mat-option> test </mat-option>
+///		</mat-select>
+.ah-select.mat-select {
+	padding: 0;
+
+	width: 180px;
+	min-width: 0;
+
+	.mat-select-trigger {
+		padding: 8px 8px 6px 8px;
+
+		.mat-select-value {
+			font-family: $font-normal;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 20px;
+			color: $c-grey-9;
+		}
+	}
+
+	&:focus {
+		.mat-select-trigger {
+			padding: 6px;
+		}
+	}
+
+	&[disabled],
+	&.mat-select-disabled {
+		background-color: $w-grey-1;
+		border: none;
+
+		cursor: not-allowed;
+
+		.mat-select-trigger {
+			padding: 8px;
+			cursor: not-allowed;
+
+			.mat-select-value {
+				color: $w-grey-7;
+			}
+		}
+	}
+}
+
+.ah-select-search.mat-select-panel {
+	padding-top: 3em;
+
+	.ah-select-search-input {
+		position: absolute;
+		top: 0;
+
+		font-size: 14px;
+		font-family: $font-normal;
+
+		outline: none;
+		border: none;
+
+		padding: 4px 16px;
+		line-height: 34px; // 42px - 8px of top and bottom padding
+		width: calc(100% - 32px); // 32px of left and right padding
+
+		border-bottom: 1px solid $w-grey-6;
+	}
+}
+
+// For mat-select multiple
+.mat-select-panel {
+	.mat-pseudo-checkbox {
+		border: 1px solid $p-blue-6;
+		border-radius: 3px;
+	}
+
+	.mat-pseudo-checkbox-checked {
+		background: $p-blue-6 !important;
+
+		&::after {
+			top: 3.4px;
+			left: 2px;
+		}
+	}
+}

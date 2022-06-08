@@ -1,0 +1,19 @@
+.ads-home-page-article {
+	.ads-home-page-title,
+	.ads-home-page-content {
+		text-align: center;
+	}
+
+	.ads-home-page-title {
+		margin-bottom: 24px;
+
+		font-family: $font-bold;
+		font-size: 30px;
+		color: $p-blue-7;
+	}
+
+	.ads-home-page-content * {
+		font-size: 18px;
+		color: $grey-1;
+	}
+}

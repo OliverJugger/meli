@@ -1,0 +1,17 @@
+/// Basic form
+.ads-form-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+
+	margin: 24px 0;
+
+	.ah-form-group {
+		flex-grow: 1;
+		width: calc(50% - 32px);
+
+		&.ah-form-group-wide {
+			width: 100%;
+		}
+	}
+}

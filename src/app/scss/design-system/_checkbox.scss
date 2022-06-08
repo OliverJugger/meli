@@ -1,0 +1,72 @@
+@import 'palette';
+
+/// Override angular material checkbox's style
+/// Ex:
+///		<mat-checkbox class="ah-checkbox"></mat-checkbox>
+mat-checkbox.ah-checkbox {
+	.mat-checkbox-layout {
+		.mat-checkbox-label {
+			font-family: $font-bold;
+			font-size: 14px;
+			line-height: 24px;
+			color: $c-grey-7;
+		}
+	}
+
+	// Not checked
+	.mat-checkbox-layout,
+	.mat-checkbox-label {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	// Not checked
+	.mat-checkbox-layout {
+		.mat-checkbox-inner-container {
+			.mat-checkbox-frame {
+				border: 1px solid $p-blue-6;
+				border-radius: 3px;
+			}
+		}
+	}
+
+	// Checked
+	&.mat-checkbox-checked {
+		.mat-checkbox-layout {
+			.mat-checkbox-inner-container {
+				.mat-checkbox-background {
+					background-color: $p-blue-6;
+				}
+			}
+		}
+	}
+
+	// Disabled
+	&.mat-checkbox-disabled {
+		.mat-checkbox-layout {
+			.mat-checkbox-inner-container {
+				.mat-checkbox-frame {
+					border-color: $c-grey-3;
+				}
+
+				.mat-checkbox-background {
+					background-color: $w-grey-2;
+					margin: 1px; // otherwise background bleed over the frame
+
+					.mat-checkbox-checkmark-path {
+						stroke: $c-grey-3 !important;
+					}
+				}
+			}
+		}
+	}
+
+	// Disable ripple
+	.mat-checkbox-inner-container:hover .mat-checkbox-persistent-ripple {
+		opacity: 0;
+	}
+
+	.mat-ripple-element {
+		opacity: 0 !important;
+	}
+}

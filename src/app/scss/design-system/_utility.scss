@@ -1,0 +1,25 @@
+@mixin ah-elevation {
+	box-shadow: 0 8px 16px 2px rgb(0 0 0 / 20%);
+}
+
+@mixin pipe-content {
+	content: '';
+	border: 1px solid black;
+}
+
+.ah-elevation {
+	@include ah-elevation();
+}
+
+.pipe-before {
+	display: inline;
+	&::before {
+		@include pipe-content();
+	}
+}
+
+.pipe-after {
+	&::after {
+		@include pipe-content();
+	}
+}
