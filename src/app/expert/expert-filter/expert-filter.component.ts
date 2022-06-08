@@ -49,7 +49,6 @@ export class ExpertFilterComponent extends NgCleanupHelper implements OnInit{
   }
 
   onSubmit(){
-    console.log(this.form.value)
   }
 
   onClick(){

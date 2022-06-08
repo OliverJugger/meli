@@ -18,11 +18,11 @@ export class ExpertService {
 	constructor(private http: HttpClient) {}
 
 	launch(): Observable<Expert[]> {
-		return this.http.get<Expert[]>('http://localhost:8888/cgi-bin/all.py', this.httpOptions) 
+		return new Observable<Expert[]>() 
 	}
 
 	launchSearch(): Observable<ExpertSearch> {
-		return this.http.get<ExpertSearch>('http://localhost:8888/cgi-bin/main.py', this.httpOptions)
+		return  new Observable<ExpertSearch>()
 	}
 
 	// all()

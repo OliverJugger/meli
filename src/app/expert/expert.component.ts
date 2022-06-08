@@ -22,7 +22,6 @@ export class ExpertComponent implements OnInit {
   constructor(private expertService:ExpertService) {
     this.dataSource = expertList
     let randomOwner = this.getRandomOwner()
-    console.log(baseData.filter(b => b.OwnerID==randomOwner))
   }
 
   ngOnInit(): void {
@@ -43,7 +42,7 @@ export class ExpertComponent implements OnInit {
     this.selected=true
     
     let randomOwner = this.getRandomOwner()
-    
+
     this.sampleData = baseData.filter(b => b.OwnerID==randomOwner).map(dataItem => (
       <SchedulerEvent> {
           id: dataItem.TaskID,
